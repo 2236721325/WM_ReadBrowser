@@ -37,6 +37,7 @@ namespace WM.ReadBrowser
             builder.Services.AddSingleton<IMauiInitializeService>(new IocConfigurationService());
 
 
+            //全局异常处理。我也不知道靠谱不靠谱，应该是靠谱的
             MauiExceptions.UnhandledException += (sender, args) =>
             {
                 App.Current.MainPage.DisplayAlert("异常", args.ExceptionObject.ToString(), "了解").Wait();

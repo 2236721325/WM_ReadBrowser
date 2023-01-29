@@ -22,6 +22,8 @@ public partial class MainPage : ContentPage
     }
     System.Timers.Timer timer;
 
+
+    //在js中定时执行页面切换就无效了，就这样吧。
     protected override void OnAppearing()
     {
 
@@ -56,7 +58,9 @@ for (let index = 0; index < videos.length; index++) {
 for (let index = 0; index < iframes.length; index++) {
     iframes[index].style.display=""none"";
 }";
+                    //这个接口参数不能有换行符，要有；
                     webView.EvaluateJavaScriptAsync(script.Replace("\r\n", ""));
+                    
                 }
                 catch (Exception _e)
                 {
@@ -78,6 +82,8 @@ for (let index = 0; index < iframes.length; index++) {
         base.OnDisappearing();
     }
     DateTime? lastPressedTime;
+    
+    //连按两次退出
     protected override  bool OnBackButtonPressed()
     {
         if (webView.CanGoBack)
