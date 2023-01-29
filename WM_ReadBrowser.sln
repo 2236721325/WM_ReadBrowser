@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WM_ReadBrowser", "WM_ReadBrowser\WM_ReadBrowser.csproj", "{E1C67799-4230-4569-A855-1152B010D534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WM.ReadBrowser", "WM.ReadBrowser\WM.ReadBrowser.csproj", "{819C014F-9ED4-4B2D-93C8-9859186C574E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E1C67799-4230-4569-A855-1152B010D534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1C67799-4230-4569-A855-1152B010D534}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1C67799-4230-4569-A855-1152B010D534}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{E1C67799-4230-4569-A855-1152B010D534}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1C67799-4230-4569-A855-1152B010D534}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1C67799-4230-4569-A855-1152B010D534}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{819C014F-9ED4-4B2D-93C8-9859186C574E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819C014F-9ED4-4B2D-93C8-9859186C574E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819C014F-9ED4-4B2D-93C8-9859186C574E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{819C014F-9ED4-4B2D-93C8-9859186C574E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819C014F-9ED4-4B2D-93C8-9859186C574E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819C014F-9ED4-4B2D-93C8-9859186C574E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
