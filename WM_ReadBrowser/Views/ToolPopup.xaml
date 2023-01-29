@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="WM_ReadBrowser.Views.ToolPopup"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:WM_ReadBrowser.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:vm="clr-namespace:WM_ReadBrowser.ViewModels"
+    x:Name="page"
+    x:DataType="vm:ToolViewModel">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border
+            Grid.Row="0"
+            BackgroundColor="{StaticResource Primary}"
+            StrokeThickness="0">
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="收藏夹"
+                TextColor="White" />
+        </Border>
+
+        <ListView
+            Grid.Row="1"
+            ItemTapped="ListView_ItemTapped"
+            ItemsSource="{Binding WebCollections}"
+            SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <SwipeView>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Label
+                                    Grid.Row="0"
+                                    LineBreakMode="TailTruncation"
+                                    TextColor="{StaticResource Primary}">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Source="名称:" />
+                                            <Binding Path="Name" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Label Grid.Row="1" LineBreakMode="TailTruncation">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Source="地址:" />
+                                            <Binding Path="Url" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </Grid>
+
+                            <SwipeView.RightItems>
+                                <SwipeItem
+                                    BackgroundColor="Red"
+                                    Command="{Binding Source={x:Reference page}, Path=BindingContext.DeleteCommand}"
+                                    CommandParameter="{Binding}"
+                                    Text="删除" />
+
+                            </SwipeView.RightItems>
+                        </SwipeView>
+
+
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+    </Grid>
+
+
+</toolkit:Popup>
