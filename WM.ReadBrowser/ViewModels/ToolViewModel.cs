@@ -42,6 +42,7 @@ namespace WM.ReadBrowser.ViewModels
 
             try
             {
+                //_db.Database.DeleteAsync(object) 非泛型接口在 release版本中报错，在debug中有效 我直接好家伙。。。。
                 await _db.Database.DeleteAsync<WebCollection>(primaryKey: Id);
                 await InitData();
             }

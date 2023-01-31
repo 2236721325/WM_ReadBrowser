@@ -41,6 +41,7 @@
             x:Name="webView"
             Grid.Row="1"
             Navigating="webView_Navigating"
+            Navigated="webView_Navigated"
             Source="{Binding Source}" />
         <Grid Grid.Row="2" BackgroundColor="{StaticResource Primary}">
             <Grid.ColumnDefinitions>
