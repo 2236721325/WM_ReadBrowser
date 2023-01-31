@@ -10,7 +10,7 @@ Maui 看小说专用浏览器，去除图片 视频 广告
 
 
 
-目前的 js脚本
+目前的 js脚本 间隔30ms一执行
 
 ```js
 var imgs= document.getElementsByTagName("img");
@@ -32,3 +32,4 @@ for (let index = divs.length-1; index >= 0; index--) {
 }
 }
 ```
+
