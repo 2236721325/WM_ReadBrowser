@@ -23,7 +23,7 @@ public partial class MainPage : ContentPage
     System.Timers.Timer timer;
 
 
-    //在js中定时执行页面切换就无效了，就这样吧。
+    //在js定时执行的话 页面切换 后就失效了  所以在C#中定时执行。
     protected override void OnAppearing()
     {
 
@@ -82,7 +82,7 @@ for (let index = 0; index < iframes.length; index++) {
         base.OnDisappearing();
     }
     DateTime? lastPressedTime;
-    
+
     //连按两次退出
     protected override  bool OnBackButtonPressed()
     {
@@ -131,7 +131,6 @@ for (let index = 0; index < iframes.length; index++) {
     {
         _vm.Url = e.Url;
         entry_url.CursorPosition = 0;
-
     }
 }
 
